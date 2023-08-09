@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorBackground">
+
+
+    <SearchView
+        android:id="@+id/searchProduct"
+        android:layout_width="335dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shape_search"
+        android:iconifiedByDefault="false"
+        android:queryBackground="@android:color/transparent"
+        android:queryHint="Search Product"
+        android:searchIcon="@drawable/shape_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </SearchView>
+
+    <ImageButton
+        android:id="@+id/search_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_search"
+        app:layout_constraintBottom_toBottomOf="@id/searchProduct"
+        app:layout_constraintRight_toRightOf="@id/searchProduct"
+        android:layout_weight="1"
+        android:backgroundTint="@color/colorDivider"
+        android:src="@drawable/ic_search"
+        app:layout_constraintTop_toTopOf="@id/searchProduct" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchProduct"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:spanCount="2"
+        android:id="@+id/ProductList"
+        tools:listitem="@layout/product_row"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

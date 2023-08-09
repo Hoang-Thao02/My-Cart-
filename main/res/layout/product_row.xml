@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_product_card"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="10dp"
+    >
+
+    <ImageView
+        android:id="@+id/ProductImageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        tools:srcCompat="@drawable/image" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="Đèn ngủ 3D led để bàn trang trí nhiều mẫu"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="đ 49.000"
+            android:textColor="#A5670D"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnCart"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_btn_add_cart"
+            android:gravity="center"
+            android:src="@drawable/ic_add_cart_24" />
+    </LinearLayout>
+</LinearLayout>
